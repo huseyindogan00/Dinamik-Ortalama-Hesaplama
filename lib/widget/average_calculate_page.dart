@@ -2,6 +2,7 @@ import 'package:dinamik_ortalama_hesaplama/constants/constants.dart';
 import 'package:dinamik_ortalama_hesaplama/helper/data_helper.dart';
 import 'package:dinamik_ortalama_hesaplama/model/lesson.dart';
 import 'package:dinamik_ortalama_hesaplama/widget/average_show.dart';
+import 'package:dinamik_ortalama_hesaplama/widget/lessons_list.dart';
 import 'package:flutter/material.dart';
 
 class AverageCalculatePage extends StatefulWidget {
@@ -48,10 +49,7 @@ class _AverageCalculatePageState extends State<AverageCalculatePage> {
             ],
           ),
           Expanded(
-            child: Container(
-              color: Colors.blue,
-              child: const Text('Liste Buraya gelicek'),
-            ),
+            child: LessonsList(),
           )
         ],
       ),

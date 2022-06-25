@@ -1,5 +1,6 @@
 import 'package:dinamik_ortalama_hesaplama/helper/data_helper.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dinamik_ortalama_hesaplama/model/lesson.dart';
+import 'package:flutter/material.dart';
 
 class LessonsList extends StatefulWidget {
   const LessonsList({Key? key}) : super(key: key);
@@ -9,11 +10,23 @@ class LessonsList extends StatefulWidget {
 }
 
 class _LessonsListState extends State<LessonsList> {
+  List<Lesson> allLessonList = DataHelper.allLesson;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemBuilder: (context, index) {},
-      itemCount: DataHelper.averageCalculate(),
+      itemCount: allLessonList.length,
+      itemBuilder: (context, index) {
+        return Card(
+          color: Colors.amber.shade300,
+          child: ListTile(
+            leading: Text('${index + 1}'),
+            title: Text(allLessonList[index].name),
+            subtitle: Text(
+              '${allLessonList[index].creditValue} Kredi, Not Değeri ${allLessonList[index].letterValue}',
+            ),
+          ),
+        );
+      },
     );
   }
 }

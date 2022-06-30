@@ -1,5 +1,5 @@
 import 'package:dinamik_ortalama_hesaplama/constants/constants.dart';
-import 'package:dinamik_ortalama_hesaplama/widget/average_calculate_page.dart';
+import 'package:dinamik_ortalama_hesaplama/widget/average_calculate_main_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Constants.mainColor,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        //visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const AverageCalculatePage(),
+      home: const AverageCalculateMainPage(),
     );
   }
 }

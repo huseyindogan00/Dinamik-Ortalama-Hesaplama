@@ -13,17 +13,17 @@ class TextFormFieldWidget extends StatelessWidget {
       controller: _textController,
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: Constants.borderRadius, borderSide: BorderSide.none),
-          hintText: 'Matematik',
+          hintText: 'Ör.: Matematik',
           filled: true,
           fillColor: Constants.mainColor.shade100.withOpacity(0.3)),
       onSaved: (newValue) {
         onTextField(newValue);
+        _textController.text = 'ds';
       },
       validator: (value) {
         if (value!.isEmpty) {
           return 'Ders adını giriniz';
         }
-        _textController.text = '';
         return null;
       },
     );
